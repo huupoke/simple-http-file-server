@@ -162,7 +162,7 @@ def run_server(
 
 if __name__ == '__main__':
     parser = ArgumentParser(description='A simple HTTP file server that supports uploading from the browser')
-    parser.add_argument('-b', '--bind', type=str, metavar='ADDRESS', help='bind to address', default='0')
+    parser.add_argument('-b', '--bind', type=str, metavar='ADDRESS', help='bind to address', default='0.0.0.0')
     parser.add_argument('port', type=int, nargs='?', help='bind to port', default=8000)
     args = parser.parse_args()
     run_server(address=args.bind, port=args.port)
